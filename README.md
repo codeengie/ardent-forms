@@ -11,7 +11,7 @@ Ardent Forms is a React-based web application designed to showcase the websites 
   + Lambda
   + Route 53
   + S3
-+ CSS3
++ CSS3/SCSS
 + HTML5
 + JavaScript
 + Node.js
@@ -27,7 +27,7 @@ $ npm install
 
 ## Run
 ```bash
-$ npm run dev #dev
+$ npm run dev # dev
 $ npm run build # prod
 ```
 
