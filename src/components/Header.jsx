@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <header>Ardent Forms</header>
+        <header>Ardent Forms <br/><small>Crafting Code, Shaping Experience</small></header>
     );
 }
 
