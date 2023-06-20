@@ -23,10 +23,10 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact">
+        <section className="contact">
             <button onClick={sendForm}>Send</button>
             <p>{movie.count}</p>
-        </div>
+        </section>
     )
 }
 
