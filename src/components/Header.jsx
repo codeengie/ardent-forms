@@ -1,6 +1,8 @@
+import './Header.scss';
+
 const Header = () => {
     return (
-        <header>Ardent Forms</header>
+        <header className="header">Ardent Forms</header>
     );
 }
 
