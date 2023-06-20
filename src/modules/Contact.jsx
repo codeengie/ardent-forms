@@ -24,6 +24,8 @@ const Contact = () => {
 
     return (
         <section className="contact">
+            <h2 className="contact__title">Contact</h2>
+            <p className="contact__text">Feel free to contact me and I will get back to you as soon as possible</p>
             <button onClick={sendForm}>Send</button>
             <p>{movie.count}</p>
         </section>
