@@ -1,0 +1,7 @@
+.about {
+  &__text {
+    &:not(:first-of-type) {
+      margin-top: 22px;
+    }
+  }
+}

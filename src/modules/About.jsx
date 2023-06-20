@@ -1,3 +1,5 @@
+import './About.scss';
+
 const About = () => {
     const gradYear = 2010;
     const yearsOfExperience = new Date().getFullYear() - gradYear;
