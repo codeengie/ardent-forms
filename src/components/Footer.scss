@@ -1,0 +1,12 @@
+.footer {
+  padding-bottom: 20px;
+  text-align: center;
+
+  &__text {
+    color: var(--orochimaru);
+    font: {
+      size: 1rem;
+      weight: var(--weight-semibold);
+    }
+  }
+}
