@@ -1,7 +1,9 @@
-.job-info {
-  &__tech {
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
+.job-listing {
+  &__text {
+    margin-top: 8px;
+  }
+
+  &__title {
+    margin-top: 7px;
   }
 }
