@@ -1,0 +1,18 @@
+.project-listing {
+  &__detail {
+    margin-top: 15px;
+  }
+
+  &__img {
+    display: block;
+    margin: 28px auto 0;
+  }
+
+  &__title {
+    font: {
+      size: 1.6rem;
+      weight: var(--weight-bold);
+    }
+    margin-top: 24px;
+  }
+}
