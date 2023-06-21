@@ -1,0 +1,40 @@
+.contact {
+  &__title {
+    margin-top: 19px;
+  }
+}
+
+.input {
+  background-color: var(--eerie-black);
+  border-radius: 6px;
+  height: 60px;
+  padding: 0 24px;
+
+  &__field,
+  &__label {
+    color: var(--nickel);
+    font: {
+      family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+      size: 1.6rem;
+      weight: var(--weight-semibold);
+    }
+  }
+
+  &__field {
+    background-color: transparent;
+    width: 100%;
+  }
+}
+
+.textarea {
+  background-color: var(--eerie-black);
+  border-radius: 6px;
+  color: var(--nickel);
+  font: {
+    family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    size: 1.6rem;
+    weight: var(--weight-semibold);
+  };
+  padding: 24px;
+  margin-top: 20px;
+}
