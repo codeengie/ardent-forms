@@ -1,9 +1,28 @@
-.tech {
-  background-color: var(--eerie-black);
-  border-radius: 6px;
-  font: {
-    size: 1.2rem;
-    weight: var(--weight-semibold);
+.tech-stack {
+  margin-top: 12px;
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    gap: 8px;
+    margin-top: 10px;
+
+    &-item {
+      background-color: var(--eerie-black);
+      border-radius: 6px;
+      font: {
+        size: 1.2rem;
+        weight: var(--weight-semibold);
+      }
+      padding: 1rem;
+    }
   }
-  padding: 1rem;
+
+  &__title {
+    font: {
+      size: 1.4rem;
+      weight: var(--weight-semibold);
+    }
+  }
+
 }
