@@ -1,40 +1,64 @@
 .contact {
-  &__title {
-    margin-top: 19px;
+  padding-bottom: 60px;
+
+  &__text {
+    margin-bottom: 32px;
   }
-}
 
-.input {
-  background-color: var(--eerie-black);
-  border-radius: 6px;
-  height: 60px;
-  padding: 0 24px;
+  &__title {
+    margin-top: 60px;
+  }
 
-  &__field,
-  &__label {
-    color: var(--nickel);
-    font: {
-      family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-      size: 1.6rem;
-      weight: var(--weight-semibold);
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &-button {
+      align-self: center;
+      background-color: var(--lavender);
+      border-radius: 6px;
+      font: {
+        family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+        size: 1.4rem;
+        weight: var(--weight-semibold);
+      }
+      height: 40px;
+      margin-top: 30px;
+      width: 126px;
+    }
+
+    &-field,
+    &-label,
+    &-textarea {
+      color: var(--nickel);
+      font: {
+        family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+        size: 1.6rem;
+        weight: var(--weight-semibold);
+      }
+    }
+
+    &-field,
+    &-textarea {
+      background-color: transparent;
+      width: 100%;
+    }
+
+    &-wrap {
+      background-color: var(--eerie-black);
+      border-radius: 6px;
+      display: flex;
+      height: 60px;
+      padding: 0 24px;
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      &--ta {
+        height: 180px;
+        padding: 24px;
+      }
     }
   }
-
-  &__field {
-    background-color: transparent;
-    width: 100%;
-  }
-}
-
-.textarea {
-  background-color: var(--eerie-black);
-  border-radius: 6px;
-  color: var(--nickel);
-  font: {
-    family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    size: 1.6rem;
-    weight: var(--weight-semibold);
-  };
-  padding: 24px;
-  margin-top: 20px;
 }
