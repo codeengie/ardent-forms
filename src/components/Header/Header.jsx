@@ -1,6 +1,6 @@
 import './Header.scss';
-import Brand from "./Brand.jsx";
-import MenuToggle from "./MenuToggle.jsx";
+import Brand from "../Brand.jsx";
+import MenuToggle from "../MenuToggle/MenuToggle.jsx";
 
 const Header = () => {
     return (

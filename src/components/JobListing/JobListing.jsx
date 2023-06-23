@@ -1,5 +1,5 @@
 import './JobListing.scss';
-import TechStack from "./TechStack.jsx";
+import TechStack from "../TechStack/TechStack.jsx";
 
 const JobListing = (props) => {
     return (

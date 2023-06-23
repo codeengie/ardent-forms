@@ -1,4 +1,4 @@
-import ProjectListing from "../components/ProjectListing.jsx";
+import ProjectListing from "../components/ProjectListing/ProjectListing.jsx";
 
 const Projects = () => {
     return (

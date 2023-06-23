@@ -1,4 +1,4 @@
-import JobListing from "../components/JobListing.jsx";
+import JobListing from "../components/JobListing/JobListing.jsx";
 
 const Experience = () => {
     return (
