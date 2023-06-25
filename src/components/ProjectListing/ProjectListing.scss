@@ -1,11 +1,36 @@
 .project-listing {
+  margin-top: 28px;
+
+  &:not(:first-of-type) {
+    margin-top: 60px;
+  }
+
   &__detail {
     margin-top: 15px;
   }
 
+  &__link {
+    align-items: center;
+    background-color: var(--blueberry);
+    border-radius: 6px;
+    color: var(--eerie-black);
+    display: flex;
+    font-weight: var(--weight-bold);
+    height: 40px;
+    justify-content: center;
+    text-decoration: none;
+    width: 126px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+  }
+
   &__img {
     display: block;
-    margin: 28px auto 0;
+    margin: 0 auto;
   }
 
   &__title {
