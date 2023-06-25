@@ -1,15 +1,27 @@
+import { useState } from 'react';
 import './JobListing.scss';
 import TechStack from "../TechStack/TechStack.jsx";
 
 const JobListing = (props) => {
+    const formatDate = (date) => {
+        const transformedDate = new Date(date);
+        const month = transformedDate.toLocaleDateString('default', { month: 'short' });
+        const year = transformedDate.getFullYear();
+
+        return `${month} ${year}`;
+    };
+
+    const fromDate = formatDate(props.data.date.from);
+    const toDate = formatDate(props.data.date.to);
+
     return (
         // @todo Look into this linting error: "Missing in props validation"
         <div className={`job-listing ${props.cName}`}>
             <p>
-                <time dateTime="2015-08-01">Aug 2014</time> - <time dateTime="2022-03-26">Mar 2022</time>
+                <time dateTime={props.data.date.from}>{fromDate}</time> - <time dateTime={props.data.date.to}>{toDate}</time>
             </p>
-            <h3 className="job-listing__title">Senior Web Developer &middot; Stamps.com</h3>
-            <p className="job-listing__text">Delivered high-quality, robust production code for a diverse array of projects. Sed egestas egestas fringilla phasellus. Nisi porta lorem mollis aliquam ut porttitor leo.</p>
+            <h3 className="job-listing__title">{props.data.title} &middot; {props.data.company}</h3>
+            <p className="job-listing__text">{props.data.info}.</p>
             <TechStack title="Tech"/>
         </div>
     );
