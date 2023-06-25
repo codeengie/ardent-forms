@@ -11,7 +11,7 @@ const Experience = () => {
                 to: '2022-03-26'
             },
             info: 'Parturient montes nascetur ridiculus mus mauris vitae. Ultricies mi eget mauris pharetra et ultrices neque ornare. Orci ac auctor augue mauris augue neque gravida in fermentum.',
-            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'AWS', 'Lambda'],
+            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Vue.js', 'Angular', '.NET', 'Azure', 'AWS'],
             title: 'Senior Web Developer'
         },
         {
