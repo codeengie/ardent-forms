@@ -1,5 +1,7 @@
 .about {
   &__text {
+    margin-top: 27px;
+
     &:not(:first-of-type) {
       margin-top: 22px;
     }
