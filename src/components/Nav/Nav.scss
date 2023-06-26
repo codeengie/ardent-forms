@@ -1,0 +1,15 @@
+.nav {
+  position: absolute;
+  right: 0;
+  top: 54px;
+
+  &__list {
+    &-item {
+      color: var(--eerie-black);
+    }
+  }
+
+  &--open {
+    background-color: var(--ripe-mango);
+  }
+}

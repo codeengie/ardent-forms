@@ -8,10 +8,9 @@
   margin-left: auto;
   width: 54px;
 
-  &__wrap {
+  &__menu {
     border: 3px solid var(--orochimaru) {
       left: 0;
-      //radius: 2px;
       right: 0;
     };
     height: 4px;
@@ -20,6 +19,8 @@
   }
 
   &--open {
+    background-color: var(--ripe-mango);
+
     #{$self}__wrap {
       transform: rotate(-90deg);
       transition: all .2s ease-out;
