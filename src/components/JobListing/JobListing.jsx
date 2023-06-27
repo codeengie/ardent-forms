@@ -22,7 +22,7 @@ const JobListing = (props) => {
             </p>
             <h3 className="job-listing__title">{props.data.title} &middot; {props.data.company}</h3>
             <p className="job-listing__text">{props.data.info}.</p>
-            <TechStack title="Tech" list={props.data.tech}/>
+            <TechStack title="Tech Used" list={props.data.tech}/>
         </div>
     );
 }

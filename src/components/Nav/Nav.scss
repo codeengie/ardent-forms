@@ -1,15 +1,77 @@
+$nav-top-space: 54px;
+$nav-padding: 40px;
+$nav-list-width: 100px;
+
+.backdrop {
+  background-color: black;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  z-index: 1015;
+
+  &--show {
+    opacity: .5;
+    position: fixed;
+  }
+}
+
 .nav {
+  background-color: var(--eerie-black);
   position: absolute;
   right: 0;
-  top: 54px;
+  top: $nav-top-space;
+  height: calc(100vh - $nav-top-space);
+  overflow: hidden;
+  transition: all .2s ease;
+  width: 0;
 
   &__list {
+    padding: $nav-padding;
+    width: $nav-list-width;
+
     &-item {
-      color: var(--eerie-black);
+      color: var(--orochimaru);
+      font: {
+        size: 1.8rem;
+        weight: var(--weight-bold);
+      }
+      text-align: right;
+
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+
+    &-link {
+      color: var(--ripe-mango);
+      position: relative;
+      text-decoration: none;
+      transition: all .2s ease;
+
+      &:hover {
+        &::after {
+          transition: all .2s ease-out;
+          width: 100%;
+        }
+      }
+
+      &::after {
+        background: white;
+        content: '';
+        height: 2px;
+        position: absolute;
+        bottom: -4px;
+        right: 0;
+        width: 0;
+      }
     }
   }
 
   &--open {
-    background-color: var(--ripe-mango);
+    transition: all .2s ease-out;
+    width: 180px;
   }
 }

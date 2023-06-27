@@ -19,9 +19,7 @@
   }
 
   &--open {
-    background-color: var(--ripe-mango);
-
-    #{$self}__wrap {
+    #{$self}__menu {
       transform: rotate(-90deg);
       transition: all .2s ease-out;
     }
