@@ -77,7 +77,7 @@ const Projects = () => {
     ];
 
     return (
-        <section className="projects">
+        <section className="projects" id="projectsRef">
             <h2 className="projects__title">Projects</h2>
             {projects.map((project, index) => <ProjectListing key={index} projectData={project}/>)}
         </section>
