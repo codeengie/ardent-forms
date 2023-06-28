@@ -7,9 +7,13 @@ const Projects = () => {
         {
             code: true,
             date: '2022-06-15',
-            image: 'https://placehold.co/290x140',
-            info: 'Amet aliquam id diam maecenas. Lectus proin nibh nisl condimentum id venenatis. Magnis dis parturient montes nascetur ridiculus mus. Duis tristique sollicitudin nibh sit.',
-            tech: ['React', 'Vite', 'HTML', 'SCSS', 'AWS'],
+            demo: false,
+            image: {
+                alt: 'Placeholder Image',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/ardent-forms.webp'
+            },
+            info: 'Ardent Forms is my portfolio designed to showcase the websites and applications I\'ve developed in the past and present. Its built using a modern web stack and boasts a responsive design, ensuring a seamless and optimized experience across desktop, tablet, and mobile devices.',
+            tech: ['React', 'Vite', 'HTML', 'SCSS', 'JavaScript', 'Node.js', 'NPM', 'AWS'],
             title: 'Ardent Forms',
             type: 'App',
             url: 'https://ardentforms.com'
@@ -17,9 +21,13 @@ const Projects = () => {
         {
             code: true,
             date: '2022-03-05',
-            image: 'https://placehold.co/290x140',
-            info: 'Justo laoreet sit amet cursus sit amet dictum sit. Et malesuada fames ac turpis egestas integer. Ante metus dictum at tempor commodo ullamcorper a lacus.',
-            tech: ['Vue.js', 'HTML', 'SCSS', 'AWS'],
+            demo: false,
+            image: {
+                alt: 'A screenshot of The Cave Dev web application showing blog posts presented on the homepage',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/thecavedev.webp'
+            },
+            info: 'The Cave Dev is a personal blogging web application that serves as a space where I can write, express my thoughts, and expertise on all things related to Web Development. Its built using a modern web stack and boasts a responsive design, ensuring a seamless and optimized experience across desktop, tablet, and mobile devices.',
+            tech: ['Vue.js', 'HTML', 'SCSS', 'JavaScript', 'Node.js', 'NPM', 'AWS'],
             title: 'The Cave Dev',
             type: 'App',
             url: 'https://thecavedev.com'
@@ -27,9 +35,13 @@ const Projects = () => {
         {
             code: true,
             date: '2021-02-15',
-            image: 'https://placehold.co/290x140',
-            info: 'Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. In iaculis nunc sed augue lacus viverra. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Lacus viverra vitae congue eu consequat ac.',
-            tech: ['Vue.js', 'HTML', 'SCSS', 'JavaScript', 'AWS'],
+            demo: true,
+            image: {
+                alt: 'A screenshot of the ShelfDat web application showing a dashboard interface with recent media',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/shelfdat.webp'
+            },
+            info: 'ShelfDat is an inventory management web application. It enables the user to easily track what they have and where it is at anytime on any device. ShelfDat is built using a modern web stack and boasts a responsive design, ensuring a seamless and optimized experience across desktop, tablet, and mobile devices.',
+            tech: ['Vue.js', 'HTML', 'SCSS', 'JavaScript', 'Node.js', 'NPM', 'AWS'],
             title: 'ShelfDat',
             type: 'App',
             url: 'https://shelfdat.com'
@@ -37,7 +49,11 @@ const Projects = () => {
         {
             code: false,
             date: '2020-09-11',
-            image: 'https://placehold.co/290x140',
+            demo: false,
+            image: {
+                alt: 'Placeholder Image',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/endicia.webp'
+            },
             info: 'Ornare lectus sit amet est placerat in egestas erat. Cras sed felis eget velit aliquet sagittis. Dolor sit amet consectetur adipiscing. Augue interdum velit euismod in pellentesque massa placerat duis.',
             tech: ['.NET', 'SQL', 'HTML', 'SCSS', 'Bootstrap', 'JavaScript', 'jQuery'],
             title: 'Endicia',
@@ -47,7 +63,11 @@ const Projects = () => {
         {
             code: false,
             date: '2017-06-11',
-            image: 'https://placehold.co/290x140',
+            demo: false,
+            image: {
+                alt: 'Placeholder Image',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/shipworks.webp'
+            },
             info: 'Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Pulvinar elementum integer enim neque volutpat.',
             tech: ['.NET', 'SQL', 'HTML', 'SCSS', 'Bootstrap', 'JavaScript', 'jQuery'],
             title: 'Shipworks',
@@ -57,18 +77,26 @@ const Projects = () => {
         {
             code: false,
             date: '2016-04-22',
-            image: 'https://placehold.co/290x140',
+            demo: false,
+            image: {
+                alt: 'Placeholder Image',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/webreg.webp'
+            },
             info: 'Scelerisque in dictum non consectetur. Sed id semper risus in hendrerit gravida rutrum quisque non. Libero nunc consequat interdum varius sit amet mattis.',
             tech: ['Steal.js', '.NET', 'SQL', 'HTML', 'SCSS', 'Bootstrap', 'JavaScript', 'jQuery'],
             title: 'Web Registration',
             type: 'App',
-            url: 'https://webregistration.com'
+            url: 'https://registration.stamps.com'
         },
         {
             code: false,
             date: '2015-12-23',
-            image: 'https://placehold.co/290x140',
-            info: 'Libero id faucibus nisl tincidunt eget nullam non nisi est. Ultrices vitae auctor eu augue ut lectus arcu. Turpis egestas maecenas pharetra convallis posuere morbi leo urna.',
+            demo: false,
+            image: {
+                alt: 'Placeholder Image',
+                source: 'https://s3.us-west-1.amazonaws.com/images.ardentforms.com/images/projects/stamps.webp'
+            },
+            info: 'The design is clean, modern, and visually appealing, allowing users to navigate effortlessly through the various sections and access the information they need. With its responsive layout, the Stamps.com website ensures a consistent and optimized experience across desktop and mobile devices',
             tech: ['.NET', 'SQL', 'HTML', 'SCSS', 'Bootstrap', 'JavaScript', 'jQuery'],
             title: 'Stamps',
             type: 'Website',

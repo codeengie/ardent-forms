@@ -4,7 +4,11 @@ import TechStack from "../TechStack/TechStack.jsx";
 const ProjectListing = (props) => {
     return (
         <div className="project-listing">
-            <img className="project-listing__img" src="https://placehold.co/290x140" alt="Placeholder"/>
+            <img
+                className="project-listing__img"
+                src={props.projectData.image.source}
+                alt={props.projectData.image.alt}
+            />
             <h3 className="project-listing__title">{props.projectData.title}</h3>
             <p className="project-listing__detail">{props.projectData.info}</p>
             <TechStack list={props.projectData.tech}/>
@@ -16,6 +20,9 @@ const ProjectListing = (props) => {
             )}
             <div className="project-listing__links">
                 <a className="project-listing__link" href={props.projectData.url} rel="noreferrer" target="_blank">{`View ${props.projectData.type}`}</a>
+                {props.projectData.demo && (
+                    <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
+                )}
             </div>
         </div>
     );

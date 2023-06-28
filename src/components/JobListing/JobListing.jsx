@@ -21,7 +21,7 @@ const JobListing = (props) => {
                 <time dateTime={props.data.date.from}>{fromDate}</time> - <time dateTime={props.data.date.to}>{toDate}</time>
             </p>
             <h3 className="job-listing__title">{props.data.title} &middot; {props.data.company}</h3>
-            <p className="job-listing__text">{props.data.info}.</p>
+            <p className="job-listing__text">{props.data.info}</p>
             <TechStack title="Tech Used" list={props.data.tech}/>
         </div>
     );

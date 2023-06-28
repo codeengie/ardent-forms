@@ -10,8 +10,8 @@ const Experience = () => {
                 from: '2014-08-12',
                 to: '2022-03-26'
             },
-            info: 'Parturient montes nascetur ridiculus mus mauris vitae. Ultricies mi eget mauris pharetra et ultrices neque ornare. Orci ac auctor augue mauris augue neque gravida in fermentum.',
-            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Vue.js', 'Angular', '.NET', 'Azure', 'AWS'],
+            info: 'Stamps.com is an independent vendor that provides internet based mailing and shipping services for USPS and UPS. As a Senior Web Developer at Stamps.com I had the opportunity to contribute to the growth and success of a leading e-commerce and shipping solutions provider. I collaborated, actively participated in design, development, and maintenance of the company\'s web-based applications.',
+            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Vue.js', 'Angular', '.NET', 'SQL', 'Azure', 'AWS', 'Gulp'],
             title: 'Senior Web Developer'
         },
         {
@@ -20,8 +20,8 @@ const Experience = () => {
                 from: '2011-02-07',
                 to: '2014-08-02'
             },
-            info: 'Pellentesque id nibh tortor id aliquet lectus. Risus pretium quam vulputate dignissim suspendisse in est ante in.',
-            tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Node.js', 'Akamai', 'Jenkins'],
+            info: 'Nexon America is a video game publisher that specializes in free-to-play games for PC and mobile phones. As a Front-End Developer at Nexon America I had the opportunity to work on cutting-edge projects that shaped the player experience across various gaming platforms. I played a key role in translating design concepts into seamless, responsive, visually stunning user interfaces that optimized performance and usability. ',
+            tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Node.js', 'Akamai', 'Jenkins', 'Grunt'],
             title: 'Front-End Developer'
         }
     ];
