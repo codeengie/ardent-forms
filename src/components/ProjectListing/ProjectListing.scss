@@ -14,7 +14,10 @@
   }
 
   &__disclaimer {
-    font-size: 1.1rem;
+    font: {
+      size: 1.1rem;
+      weight: var(--weight-semibold);
+    }
     margin-top: 4px;
   }
 
