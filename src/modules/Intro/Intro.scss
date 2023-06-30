@@ -2,11 +2,12 @@
   align-items: center;
   background-color: var(--eerie-black);
   display: flex;
-  height: 260px;
+  height: 206px;
   justify-content: center;
 
   &__head {
     font-size: 2.6rem;
+    line-height: 1.2;
     margin-top: 0;
   }
 
