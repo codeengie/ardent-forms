@@ -14,6 +14,7 @@ export const MenuContextProvider = (props) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleMenuState = () => {
+        document.body.classList.toggle('noscroll');
         setIsMenuOpen(!isMenuOpen);
     }
 
