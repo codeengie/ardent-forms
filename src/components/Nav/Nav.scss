@@ -21,6 +21,10 @@
     height: 54px;
     margin-left: 126px;
     width: 54px;
+
+    @media (width >= 768px) {
+      display: none;
+    }
   }
 
   &__list {
