@@ -7,7 +7,6 @@ const Experience = () => {
 
     return (
         <section className="experience" id="experienceRef">
-            {/*{ctx.portfolio.map((item, index) => <div key={index}>{item.Title}</div>)}*/}
             <h2 className="experience__title">Experience</h2>
             {ctx.portfolio
                 .filter(job => job['RecordType'] === 'job')

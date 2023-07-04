@@ -32,10 +32,6 @@ export const PortfolioContextProvider = (props) => {
         }
     }, []);
 
-    /*const filterPortfolio = filterBy => {
-        const filtered = portfolio.filter(item => item.includes())
-    };*/
-
     useEffect(() => {
         fetchPortfolio();
     }, [fetchPortfolio]);
