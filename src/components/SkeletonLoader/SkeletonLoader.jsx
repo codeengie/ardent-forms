@@ -1,8 +1,10 @@
 import './SkeletonLoader.scss';
 
-const SkeletonLoader = () => {
+const SkeletonLoader = (props) => {
+    const modifier = props.modifier ? 'skeleton skeleton--image' : 'skeleton';
+
     return (
-        <div className="skeleton">
+        <div className={modifier}>
             <p className="skeleton__time"></p>
             <h3 className="skeleton__title"></h3>
             <p className="skeleton__body"></p>

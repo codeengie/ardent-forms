@@ -14,6 +14,10 @@ const Experience = () => {
             .map((job, index) => <JobListing key={index} data={job}/>);
     }
 
+    if (ctx.error) {
+        content = <p>{ctx.error}</p>
+    }
+
     // Display loader while fetching data
     if (ctx.isLoading) {
         content = <SkeletonLoader/>;

@@ -1,4 +1,7 @@
 .skeleton {
+  $self: &;
+  margin-top: 28px;
+
   &__body,
   &__list-item,
   &__subtitle,
@@ -44,6 +47,19 @@
 
   &__title {
     width: 36%;
+  }
+
+  &--image {
+    #{$self} {
+      &__body {
+        height: 10rem;
+      }
+
+      &__time {
+        height: 20rem;
+        width: 100%;
+      }
+    }
   }
 }
 
