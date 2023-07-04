@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 const PortfolioContext = React.createContext({
+    isLoading: false,
     portfolio: []
 });
 
 export const PortfolioContextProvider = (props) => {
+    const [isLoading, setIsLoading] = useState(false);
     const [portfolio, setPortfolio] = useState([]);
 
     const fetchPortfolio = useCallback(async () => {
@@ -17,6 +19,7 @@ export const PortfolioContextProvider = (props) => {
         };
 
         try {
+            setIsLoading(true);
             const response = await fetch(`${import.meta.env.VITE_API_URL}/portfolio`, settings);
 
             if (!response.ok) {
@@ -24,18 +27,18 @@ export const PortfolioContextProvider = (props) => {
             }
 
             const data = await response.json();
-
             setPortfolio(JSON.parse(data.body));
         } catch (error) {
             console.log('Error:', error.message)
         }
+        setIsLoading(false);
     }, []);
 
     useEffect(() => {
         fetchPortfolio();
     }, [fetchPortfolio]);
 
-    return <PortfolioContext.Provider value={{portfolio: portfolio}}>{props.children}</PortfolioContext.Provider>
+    return <PortfolioContext.Provider value={{isLoading: isLoading, portfolio: portfolio}}>{props.children}</PortfolioContext.Provider>
 }
 
 export default PortfolioContext;

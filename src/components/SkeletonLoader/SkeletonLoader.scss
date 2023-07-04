@@ -1,0 +1,57 @@
+.skeleton {
+  &__body,
+  &__list-item,
+  &__subtitle,
+  &__time,
+  &__title {
+    animation: skeleton-loading 1s linear infinite alternate;
+    background-color: var(--orochimaru);
+  }
+
+  &__body {
+    height: 20rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    gap: 8px;
+  }
+
+  &__list-item {
+    height: 30px;
+    width: 8%;
+  }
+
+  &__subtitle,
+  &__time,
+  &__title {
+    height: 1.6rem;
+  }
+
+  &__subtitle,
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__subtitle {
+    width: 12%;
+  }
+
+  &__time {
+    width: 20%;
+  }
+
+  &__title {
+    width: 36%;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--nickel);
+  }
+  100% {
+    background-color: var(--eerie-black);
+  }
+}
