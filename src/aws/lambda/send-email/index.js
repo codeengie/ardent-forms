@@ -15,7 +15,7 @@ const REGION = 'us-west-2';
 // Create SES service object
 const sesClient = new SESClient({ region: REGION });
 // Email address to send to
-const recipientEmail = 'cvillanujr@gmail.com';
+const recipientEmail = process.env.WM_EMAIL;
 
 const createSendEmailCommand = (toAddress, fromName, fromAddress, fromMessage) => {
     return new SendEmailCommand({

@@ -6,7 +6,7 @@
  * have to bundle it or use Lambda Layers. I recommend using layers to make life a bit easier.
  */
 
-import { DynamoDBClient, QueryCommand } from '@aws-sdk/client-dynamodb';
+import { DynamoDBClient, ScanCommand } from '@aws-sdk/client-dynamodb';
 import { unmarshall } from '@aws-sdk/util-dynamodb';
 
 const dynamodb = new DynamoDBClient();
@@ -14,13 +14,8 @@ const tableName = 'ArdentForms';
 const queryType = 'project'; // Keyword to query the database table's primary key in this case GSI
 
 export const handler = async (event, context) => {
-    const command = new QueryCommand({
-        TableName: tableName,
-        ExpressionAttributeValues: {
-            ':rt': { S: queryType }
-        },
-        KeyConditionExpression: 'RecordType = :rt',
-        ScanIndexForward: false // Sort in descending order
+    const command = new ScanCommand({
+        TableName: tableName
     });
     const headers = { 'Content-Type': 'application/json' };
     let body;
