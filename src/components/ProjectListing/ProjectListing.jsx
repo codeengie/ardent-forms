@@ -6,21 +6,21 @@ const ProjectListing = (props) => {
         <div className="project-listing">
             <img
                 className="project-listing__img"
-                src={props.projectData.image.source}
-                alt={props.projectData.image.alt}
+                src={props.data.Image.Source}
+                alt={props.data.Image.Alt}
             />
-            <h3 className="project-listing__title">{props.projectData.title}</h3>
-            <p className="project-listing__detail">{props.projectData.info}</p>
-            <TechStack list={props.projectData.tech}/>
-            {props.projectData.code && (
+            <h3 className="project-listing__title">{props.data.Title}</h3>
+            <p className="project-listing__detail">{props.data.Info}</p>
+            <TechStack list={props.data.Tech}/>
+            {props.data.Code && (
                 <>
                     <h4 className="project-listing__subtitle">Code</h4>
                     <p className="project-listing__code">Source code is private but readily available to share with potential employers upon request.</p>
                 </>
             )}
             <div className="project-listing__links">
-                <a className="project-listing__link" href={props.projectData.url} rel="noreferrer" target="_blank">{`View ${props.projectData.type}`}</a>
-                {props.projectData.demo && (
+                <a className="project-listing__link" href={props.data.Url} rel="noreferrer" target="_blank">{`View ${props.data.Type}`}</a>
+                {props.data.Demo && (
                     <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
                 )}
             </div>
