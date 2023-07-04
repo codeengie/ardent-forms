@@ -1,24 +1,29 @@
 import './App.scss';
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import Intro from "./modules/Intro/Intro.jsx";
-import About from "./modules/About/About.jsx";
-import Experience from "./modules/Experience.jsx";
-import Projects from "./modules/Projects.jsx";
-import Contact from "./modules/Contact/Contact.jsx";
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import Intro from './modules/Intro/Intro.jsx';
+import About from './modules/About/About.jsx';
+import Experience from './modules/Experience.jsx';
+import Projects from './modules/Projects.jsx';
+import Contact from './modules/Contact/Contact.jsx';
+import { PortfolioContextProvider } from '../store/portfolio-context.jsx';
 
 const App = () => {
-  return (
-      <>
-          <Header/>
-          <Intro/>
-          <About/>
-          <Experience/>
-          <Projects/>
-          <Contact/>
-          <Footer/>
-      </>
-  )
+    return (
+        <>
+            <Header/>
+            <main role="main">
+                <Intro/>
+                <About/>
+                <PortfolioContextProvider>
+                    <Experience/>
+                    <Projects/>
+                </PortfolioContextProvider>
+                <Contact/>
+            </main>
+            <Footer/>
+        </>
+    )
 }
 
 export default App
