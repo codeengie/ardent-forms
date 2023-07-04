@@ -6,7 +6,9 @@ const ProjectListing = (props) => {
         <div className="project-listing">
             <img
                 className="project-listing__img"
+                height="204"
                 src={props.data.Image.Source}
+                width="280"
                 alt={props.data.Image.Alt}
             />
             <h3 className="project-listing__title">{props.data.Title}</h3>

@@ -61,6 +61,10 @@ textarea {
   &:focus {
     outline: none;
   }
+
+  &::placeholder {
+    opacity: 1;
+  }
 }
 
 h2 {

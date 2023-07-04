@@ -6,9 +6,16 @@
   justify-content: center;
 
   &__head {
+    color: var(--ripe-mango);
     font-size: 2.6rem;
     line-height: 1.2;
+    text-transform: uppercase;
     margin-top: 0;
+  }
+
+  &__tagline {
+    color: var(--orochimaru);
+    text-transform: none;
   }
 
   &__wrap {
