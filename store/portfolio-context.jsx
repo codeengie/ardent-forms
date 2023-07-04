@@ -26,7 +26,6 @@ export const PortfolioContextProvider = (props) => {
             const data = await response.json();
 
             setPortfolio(JSON.parse(data.body));
-            console.log(JSON.parse(data.body));
         } catch (error) {
             console.log('Error:', error.message)
         }
