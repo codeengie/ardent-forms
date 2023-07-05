@@ -14,6 +14,7 @@ const Experience = () => {
     if (ctx.portfolio.length > 0) {
         content = ctx.portfolio
             .filter(job => job['RecordType'] === 'job')
+            .sort((a, b) => new Date(b.Date) - new Date(a.Date))
             .map((job, index) => <JobListing key={index} data={job}/>);
     }
 

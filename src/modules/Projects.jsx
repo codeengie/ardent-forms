@@ -14,6 +14,7 @@ const Projects = () => {
     if (ctx.portfolio.length > 0) {
         content = ctx.portfolio
             .filter(project => project['RecordType'] === 'project')
+            .sort((a, b) => new Date(b.Date) - new Date(a.Date))
             .map((project, index) => <ProjectListing key={index} data={project}/>);
     }
 
