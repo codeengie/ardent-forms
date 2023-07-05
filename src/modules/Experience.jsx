@@ -1,10 +1,13 @@
 import JobListing from '../components/JobListing/JobListing.jsx';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import PortfolioContext from '../../store/portfolio-context.jsx';
 import SkeletonLoader from '../components/SkeletonLoader/SkeletonLoader.jsx';
+import scrollContext from '../../store/scroll-context.jsx';
 
 const Experience = () => {
     const ctx = useContext(PortfolioContext);
+    const ctxScroll = useContext(scrollContext);
+    const experienceRef = useRef();
     let content = '';
 
     // Output job listing
@@ -23,8 +26,14 @@ const Experience = () => {
         content = <SkeletonLoader/>;
     }
 
+    useEffect(() => {
+        if (ctxScroll.scrollToRef === 'experienceRef') {
+            ctxScroll.handleScrollToRef(experienceRef);
+        }
+    }, [ctxScroll.scrollToRef, ctxScroll.handleScrollToRef, ctxScroll]);
+
     return (
-        <section className="experience" id="experienceRef">
+        <section className="experience" ref={experienceRef}>
             <h2 className="experience__title">Experience</h2>
             {content}
         </section>

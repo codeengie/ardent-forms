@@ -7,20 +7,23 @@ import Experience from './modules/Experience.jsx';
 import Projects from './modules/Projects.jsx';
 import Contact from './modules/Contact/Contact.jsx';
 import { PortfolioContextProvider } from '../store/portfolio-context.jsx';
+import { ScrollContextProvider } from '../store/scroll-context.jsx';
 
 const App = () => {
     return (
         <>
-            <Header/>
-            <main role="main">
-                <Intro/>
-                <About/>
-                <PortfolioContextProvider>
-                    <Experience/>
-                    <Projects/>
-                </PortfolioContextProvider>
-                <Contact/>
-            </main>
+            <ScrollContextProvider>
+                <Header/>
+                <main role="main">
+                    <Intro/>
+                    <About/>
+                    <PortfolioContextProvider>
+                        <Experience/>
+                        <Projects/>
+                    </PortfolioContextProvider>
+                    <Contact/>
+                </main>
+            </ScrollContextProvider>
             <Footer/>
         </>
     )
