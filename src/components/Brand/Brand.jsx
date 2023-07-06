@@ -1,4 +1,5 @@
-import brandLogo from '../assets/logo.svg';
+import './Brand.scss';
+import brandLogo from '../../assets/logo.svg';
 
 const Brand = () => {
     return (

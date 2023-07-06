@@ -1,4 +1,6 @@
 .nav {
+  $self: &;
+
   @media (width <= 767px) {
     background-color: var(--eerie-black);
     height: 100vh;
@@ -13,13 +15,12 @@
 
   @media (width >= 768px) {
     margin-left: auto;
-    width: inherit;
   }
 
   &__close {
     background: transparent url('../../assets/close.svg') no-repeat center/24px;
     height: 54px;
-    margin-left: 126px;
+    margin-left: 118px;
     width: 54px;
 
     @media (width >= 768px) {
@@ -49,6 +50,16 @@
       @media (width <= 767px) {
         &:not(:first-child) {
           margin-top: 14px;
+        }
+      }
+
+      @media (width >= 768px) {
+        font-size: 1.6rem;
+
+        &:last-child {
+          #{$self}__list-link {
+            padding-right: var(--module-space);
+          }
         }
       }
     }
