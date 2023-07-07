@@ -1,8 +1,9 @@
 .job-listing {
-  margin-top: 28px;
-
-  &:not(:first-of-type) {
-    margin-top: 50px;
+  &__time {
+    font: {
+      size: 1.4rem;
+      weight: var(--weight-semibold);
+    }
   }
 
   &__text {
@@ -11,5 +12,11 @@
 
   &__title {
     margin-top: 7px;
+  }
+
+  @media (width <= 991px) {
+    &:not(:first-of-type) {
+      margin-top: 50px;
+    }
   }
 }

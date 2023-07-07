@@ -16,9 +16,9 @@ const JobListing = (props) => {
     return (
         // @todo Look into this linting error: "Missing in props validation"
         <div className="job-listing">
-            <p>
-                <time dateTime={props.data.DateRange.From}>{fromDate}</time> - <time dateTime={props.data.DateRange.To}>{toDate}</time>
-            </p>
+            <div className="job-listing__time-wrap">
+                <time className="job-listing__time" dateTime={props.data.DateRange.From}>{fromDate}</time> - <time className="job-listing__time" dateTime={props.data.DateRange.To}>{toDate}</time>
+            </div>
             <h3 className="job-listing__title">{props.data.Title} &middot; {props.data.Company}</h3>
             <p className="job-listing__text">{props.data.Info}</p>
             <TechStack title="Tech Used" list={props.data.Tech}/>

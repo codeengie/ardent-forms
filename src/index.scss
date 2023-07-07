@@ -2,11 +2,13 @@
   // Color scheme
   --blueberry: #4681f4;
   --carbon-fiber: #2d2e2f;
+  --clear-blue: #387ee3;
+  --cod-gray: #141414;
   --eerie-black: #1d1d1d;
-  --lavender: #ae81ff;
+  --grey-cloud: #b6b6b6;
   --nickel: #727272;
   --orochimaru: #d9d9d9;
-  --ripe-mango: #ffbe2e;
+  --silver-chalice: #ababab;
 
   // Typeface weights
   --weight-regular: 400;
@@ -20,7 +22,7 @@
   --viewport-space: var(--module-space) * 2;
 
   background-color: var(--carbon-fiber);
-  color: var(--orochimaru);
+  color: var(--silver-chalice);
   font: {
     family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
     size: 62.5%
@@ -72,9 +74,14 @@ textarea {
 }
 
 h2 {
-  color: var(--ripe-mango);
+  color: var(--clear-blue);
   font-size: 1.4rem;
   text-transform: uppercase;
+}
+
+h3,
+h4 {
+  color: var(--grey-cloud);
 }
 
 p {
@@ -120,5 +127,9 @@ ul {
 
   @media (width >= 1200px) {
     width: calc(1200px - var(--viewport-space));
+  }
+
+  h2 {
+    margin-bottom: 28px;
   }
 }

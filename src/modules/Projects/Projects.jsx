@@ -1,8 +1,9 @@
-import ProjectListing from "../components/ProjectListing/ProjectListing.jsx";
+import ProjectListing from "../../components/ProjectListing/ProjectListing.jsx";
 import {useContext, useEffect, useRef} from 'react';
-import PortfolioContext from '../../store/portfolio-context.jsx';
-import SkeletonLoader from '../components/SkeletonLoader/SkeletonLoader.jsx';
-import ScrollContext from '../../store/scroll-context.jsx';
+import PortfolioContext from '../../../store/portfolio-context.jsx';
+import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader.jsx';
+import ScrollContext from '../../../store/scroll-context.jsx';
+import './Projects.scss';
 
 const Projects = () => {
     const ctx = useContext(PortfolioContext);
@@ -36,7 +37,9 @@ const Projects = () => {
     return (
         <section className="projects" ref={projectsRef}>
             <h2 className="projects__title">Projects</h2>
-            {content}
+            <div className="projects__wrap">
+                {content}
+            </div>
         </section>
     );
 }

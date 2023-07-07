@@ -1,5 +1,6 @@
 import './ProjectListing.scss';
 import TechStack from "../TechStack/TechStack.jsx";
+import Button from '../Button/Button.jsx';
 
 const ProjectListing = (props) => {
     // Remove `.webp` from image data @todo Fix this in the DB
@@ -35,10 +36,16 @@ const ProjectListing = (props) => {
                 </>
             )}
             <div className="project-listing__links">
-                <a className="project-listing__link" href={props.data.Url} rel="noreferrer" target="_blank">{`View ${props.data.Type}`}</a>
+                <Button
+                    cName="project-listing__link"
+                    cType="link"
+                    text={`View ${props.data.Type}`}
+                    url={props.data.Url}
+                />
                 {props.data.Demo && (
                     <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
                 )}
+
             </div>
         </div>
     );

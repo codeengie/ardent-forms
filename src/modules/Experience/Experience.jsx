@@ -1,8 +1,9 @@
-import JobListing from '../components/JobListing/JobListing.jsx';
+import JobListing from '../../components/JobListing/JobListing.jsx';
 import { useContext, useEffect, useRef } from 'react';
-import PortfolioContext from '../../store/portfolio-context.jsx';
-import SkeletonLoader from '../components/SkeletonLoader/SkeletonLoader.jsx';
-import scrollContext from '../../store/scroll-context.jsx';
+import PortfolioContext from '../../../store/portfolio-context.jsx';
+import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader.jsx';
+import scrollContext from '../../../store/scroll-context.jsx';
+import './Experience.scss';
 
 const Experience = () => {
     const ctx = useContext(PortfolioContext);
@@ -10,7 +11,7 @@ const Experience = () => {
     const experienceRef = useRef();
     let content = '';
 
-    // Output job listing
+    // Output job listing in descending order
     if (ctx.portfolio.length > 0) {
         content = ctx.portfolio
             .filter(job => job['RecordType'] === 'job')
@@ -36,7 +37,9 @@ const Experience = () => {
     return (
         <section className="experience" ref={experienceRef}>
             <h2 className="experience__title">Experience</h2>
-            {content}
+            <div className="experience__wrap">
+                {content}
+            </div>
         </section>
     );
 }

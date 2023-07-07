@@ -1,0 +1,135 @@
+$button-border-radius: 6px;
+$button-height: 40px;
+$button-width: 126px;
+$icon-envelope-size: 20px;
+$icon-text-spacing: 4px;
+
+.button {
+  $self: &;
+  align-items: center;
+  display: flex;
+  background-color: var(--cod-gray);
+  border-radius: $button-border-radius;
+  color: black;
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: 1.4rem;
+    weight: var(--weight-semibold);
+  }
+  height: $button-height;
+  justify-content: center;
+  min-width: $button-width;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+
+  &::before {
+    background-color: var(--blueberry);
+    border-radius: $button-border-radius;
+    height: $button-height;
+    content: '';
+    position: absolute;
+    transition: all .15s ease-in;
+    transform: translateX(0);
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--grey-cloud);
+
+    &::before {
+      transition: all .25s ease-out;
+      transform: translateX(186px);
+    }
+  }
+
+  &__icon,
+  &__text {
+    z-index: 2;
+  }
+
+  &__text {
+    margin-left: $icon-text-spacing;
+  }
+
+  &--email,
+  &--link {
+    #{$self}__icon {
+      height: $icon-envelope-size;
+      margin-right: $icon-text-spacing;
+      width: $icon-envelope-size;
+    }
+  }
+
+  // @todo Create svg sprite for email and link backgrounds
+  &--email {
+    &:hover {
+      #{$self}__icon {
+        background-image: url(../../assets/envelope-alt.svg);
+      }
+    }
+
+    #{$self}__icon {
+      background: transparent url(../../assets/envelope.svg) center/$icon-envelope-size;
+    }
+  }
+
+  &--link {
+    text-decoration: none;
+
+    &:active,
+    &:hover,
+    &:link,
+    &:visited {
+      color: black;
+    }
+
+    &:hover {
+      color: var(--grey-cloud);
+
+      #{$self}__icon {
+        background-image: url(../../assets/arrow-alt.svg);
+      }
+    }
+
+    #{$self}__icon {
+      background: transparent url(../../assets/arrow.svg) center/$icon-envelope-size;
+    }
+  }
+
+  &--spinner {
+    border-radius: 50%;
+    min-width: inherit;
+    padding: 0;
+    transition: all .8s cubic-bezier(.68, -.6, .32, 1.3);
+    width: 40px;
+
+    &::after {
+      animation: spinner .8s infinite linear;
+      content: '';
+      border: 3px solid white {
+        left-color: transparent;
+        radius: 50%;
+        right-color: transparent;
+      }
+      height: 24px;
+      width: 24px;
+      z-index: 3;
+    }
+
+    #{$self}__icon,
+    #{$self}__text {
+      display: none;
+    }
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

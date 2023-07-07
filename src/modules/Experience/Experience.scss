@@ -1,0 +1,20 @@
+.experience {
+  @media (width >= 992px) {
+    &__listing {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__wrap {
+      display: grid;
+      column-gap: 42px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
