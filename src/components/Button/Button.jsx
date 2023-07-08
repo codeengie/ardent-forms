@@ -2,7 +2,7 @@ import './Button.scss';
 
 const Button = (props) => {
     const buttonHtml =
-        <button className={`${props.cName} button button--email button--spinner`}>
+        <button className={`${props.cName} button button--email`} disabled={props.disableButton}>
             <span className="button__icon"></span>
             <span className="button__text">{props.text}</span>
         </button>
@@ -13,7 +13,7 @@ const Button = (props) => {
             <span className="button__text">{props.text}</span>
         </a>
 
-    const content = (props.cType === 'link') ? linkHtml : buttonHtml;
+    const content = (props.variant === 'link') ? linkHtml : buttonHtml;
 
     return (
         <>

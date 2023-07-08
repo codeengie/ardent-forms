@@ -35,6 +35,17 @@ $icon-text-spacing: 4px;
     z-index: 1;
   }
 
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    background-color: var(--nickel);
+    cursor: not-allowed;
+
+    &::before {
+      display: none;
+    }
+  }
+
   &:hover {
     color: var(--grey-cloud);
 
@@ -64,6 +75,16 @@ $icon-text-spacing: 4px;
 
   // @todo Create svg sprite for email and link backgrounds
   &--email {
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      color: var(--grey-cloud);
+
+      #{$self}__icon {
+        background-image: url(../../assets/envelope-alt.svg);
+      }
+    }
+
     &:hover {
       #{$self}__icon {
         background-image: url(../../assets/envelope-alt.svg);

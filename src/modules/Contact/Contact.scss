@@ -1,30 +1,22 @@
 .contact {
   padding-bottom: 60px;
 
-  &__text {
-    margin-bottom: 32px;
-  }
-
-  &__title {
-    margin-top: 60px;
-  }
-
   &__form {
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
 
     &-button {
       align-self: center;
-      background-color: var(--lavender);
-      border-radius: 6px;
-      font: {
-        family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-        size: 1.4rem;
-        weight: var(--weight-semibold);
-      }
-      height: 40px;
       margin-top: 30px;
-      width: 126px;
+    }
+
+    &-error {
+      bottom: 3px;
+      color: #ee5150;
+      left: 0;
+      padding: 0 24px;
+      position: absolute;
     }
 
     &-field,
@@ -44,16 +36,26 @@
       width: 100%;
     }
 
+    &-input {
+      padding-bottom: 28px;
+      position: relative;
+    }
+
+    &-message {
+      margin-top: 20px;
+      text-align: center;
+    }
+
     &-wrap {
-      background-color: var(--eerie-black);
+      background-color: var(--cod-gray);
       border-radius: 6px;
       display: flex;
       height: 60px;
       padding: 0 24px;
 
-      &:not(:first-child) {
+      /*&:not(:first-child) {
         margin-top: 20px;
-      }
+      }*/
 
       &--ta {
         height: 180px;

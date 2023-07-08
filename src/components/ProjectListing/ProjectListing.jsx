@@ -38,9 +38,9 @@ const ProjectListing = (props) => {
             <div className="project-listing__links">
                 <Button
                     cName="project-listing__link"
-                    cType="link"
                     text={`View ${props.data.Type}`}
                     url={props.data.Url}
+                    variant="link"
                 />
                 {props.data.Demo && (
                     <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
