@@ -12,10 +12,10 @@
 
   // Typeface weights
   --weight-regular: 400;
-  --weight-medium: 500;
+  //--weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
-  --weight-xbold: 800;
+  //--weight-xbold: 800;
 
   // Module spacing
   --module-space: 20px;
@@ -25,7 +25,8 @@
   color: var(--silver-chalice);
   font: {
     family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    size: 62.5%
+    size: 62.5%;
+    weight: var(--weight-regular);
   }
   line-height: 1.4;
 
