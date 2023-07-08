@@ -1,8 +1,49 @@
-import { useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import './Contact.scss';
 import Button from '../../components/Button/Button.jsx';
+import ScrollContext from '../../../store/scroll-context.jsx';
 
 const Contact = () => {
+    const ctxScroll = useContext(ScrollContext);
+    const contactRef = useRef();
+    const [spinner, setSpinner] = useState(false);
+    const [serverResponse, setServerResponse] = useState('');
+
+    const sendEmail = async (name, email, message) => {
+        const settings = {
+            method: 'POST',
+            /*headers: {
+                'x-api-key': import.meta.env.VITE_API_KEY
+            },*/
+            body: JSON.stringify({
+                senderName: name,
+                senderEmail: email,
+                senderMessage: message
+            })
+        };
+
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, settings);
+            //console.log(response);
+
+            if (!response.ok) {
+                new Error(`Request failed with status: ${response.status}`);
+            }
+
+            //const data = await response.json();
+            //console.log(data);
+            setServerResponse('Thank you! Your message has been sent. I will get back to you shortly.');
+        } catch (error) {
+            console.log('Error:', error.message);
+            setServerResponse('Oops! Something went wrong on our end. Please try again.');
+        }
+
+        // @todo Refactor so you can use clearTimeout()
+        const timeout = setTimeout(() => {
+            setServerResponse('');
+        }, 4000);
+    }
+
     /**
      * Name
      * Instead of creating additional states to manage I'm deriving `inputNameIsValid` and
@@ -70,28 +111,33 @@ const Contact = () => {
             return;
         }
 
-        console.log('Data to send: ', inputName, inputEmail, textBox);
+        // If form is valid send the email
+        setSpinner(true);
+        await sendEmail(inputName, inputEmail, textBox);
 
-        // Add spinner class
-
-        // Clear form fields
+        // Reset form, fields and buttons
         setInputName('');
         setInputNameTouched(false);
-
         setInputEmail('');
         setInputEmailTouched(false);
-
-        // @todo This is not resetting, needs fixing
         setTextBox('');
         setTextBoxTouched(false);
+        setSpinner(false);
     }
 
     const inputNameClass = inputNameIsInvalid ? 'contact__form-input contact__form-input--invalid' : 'contact__form-input';
     const inputEmailClass = inputEmailIsInvalid ? 'contact__form-input contact__form-input--invalid' : 'contact__form-input';
     const textBoxClass = textBoxIsInvalid ? 'contact__form-input contact__form-input--invalid' : 'contact__form-input';
+    const spinnerClass = spinner ? 'contact__form-button button--spinner' : 'contact__form-button';
+
+    useEffect(() => {
+        if (ctxScroll.scrollToRef === 'contactRef') {
+            ctxScroll.handleScrollToRef(contactRef);
+        }
+    }, [ctxScroll.scrollToRef, ctxScroll.handleScrollToRef, ctxScroll]);
 
     return (
-        <section className="contact" id="contactRef">
+        <section className="contact" ref={contactRef}>
             <h2 className="contact__title">Contact</h2>
             <p className="contact__text">Feel free to contact me and I&rsquo;ll get back to you as soon as possible</p>
             <form className="contact__form" onSubmit={formSubmitHandler}>
@@ -130,13 +176,14 @@ const Contact = () => {
                             maxLength="415"
                             onBlur={textBoxBlurHandler}
                             onChange={textBoxChangeHandler}
-                            placeholder="Message">
+                            placeholder="Message"
+                            value={textBox}>
                         </textarea>
                     </div>
                     {textBoxIsInvalid && <p className="contact__form-error">Please enter a message</p>}
                 </div>
-                <Button cName="contact__form-button" disableButton={!formIsValid} text="Send"/>
-                <p className="contact__form-message">Thank you! Your message has been sent. I will get back to you shortly.</p>
+                <Button cName={spinnerClass} disableButton={!formIsValid} text="Send"/>
+                <p className="contact__form-message">{serverResponse}</p>
             </form>
         </section>
     )

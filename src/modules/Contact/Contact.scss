@@ -1,4 +1,5 @@
 .contact {
+  $self: &;
   padding-bottom: 60px;
 
   &__form {
@@ -8,15 +9,17 @@
 
     &-button {
       align-self: center;
-      margin-top: 30px;
+      margin-top: 2px;
     }
 
     &-error {
       bottom: 3px;
       color: #ee5150;
       left: 0;
-      padding: 0 24px;
+      opacity: 0;
+      padding: 0 6px;
       position: absolute;
+      transition: opacity .2s ease-in;
     }
 
     &-field,
@@ -39,6 +42,17 @@
     &-input {
       padding-bottom: 28px;
       position: relative;
+
+      &--invalid {
+        #{$self}__form-error {
+          opacity: 1;
+          transition: opacity 1s ease-out;
+        }
+
+        #{$self}__form-wrap {
+          border: 1px solid #ee5150;
+        }
+      }
     }
 
     &-message {
