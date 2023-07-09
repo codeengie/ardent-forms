@@ -127,6 +127,7 @@ const Contact = () => {
         setInputEmailTouched(false);
         setTextBox('');
         setTextBoxTouched(false);
+        setTextBoxCounter(0);
         setSpinner(false);
     }
 
