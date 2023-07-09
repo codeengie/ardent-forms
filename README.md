@@ -1,7 +1,7 @@
 # Ardent Forms
 
 ## Overview
-Ardent Forms is a React-based web application designed to showcase the websites and applications I have developed, both in the past and present.
+Ardent Forms is my portfolio designed to showcase the websites and applications I've developed in the past and present. Its built using a modern web stack and boasts a responsive design, ensuring a seamless and optimized experience across desktop, tablet, and mobile devices.
 
 ## Technology
 + AWS
