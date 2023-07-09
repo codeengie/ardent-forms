@@ -79,13 +79,18 @@ const Contact = () => {
     }
 
     // Textarea
+    const [textBoxCounter, setTextBoxCounter] = useState(0);
+    const maxChar = 415;
     const [textBox, setTextBox] = useState('');
     const [textBoxTouched, setTextBoxTouched] = useState(false);
     const textBoxIsValid = textBox.trim() !== '';
     const textBoxIsInvalid = !textBoxIsValid && textBoxTouched;
 
     const textBoxChangeHandler = event => {
-        setTextBox(event.target.value);
+        let inputValue = event.target.value;
+
+        setTextBox(inputValue);
+        setTextBoxCounter(inputValue.length);
     }
 
     const textBoxBlurHandler = event => {
@@ -173,13 +178,14 @@ const Contact = () => {
                     <div className="contact__form-wrap contact__form-wrap--ta">
                         <textarea
                             className="contact__form-textarea"
-                            maxLength="415"
+                            maxLength={maxChar}
                             onBlur={textBoxBlurHandler}
                             onChange={textBoxChangeHandler}
                             placeholder="Message"
                             value={textBox}>
                         </textarea>
                     </div>
+                    <div className="contact__form-counter">{`${textBoxCounter}/${maxChar}`}</div>
                     {textBoxIsInvalid && <p className="contact__form-error">Please enter a message</p>}
                 </div>
                 <Button cName={spinnerClass} disableButton={!formIsValid} text="Send"/>

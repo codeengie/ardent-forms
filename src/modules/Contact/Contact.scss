@@ -12,6 +12,19 @@
       margin-top: 2px;
     }
 
+    &-counter {
+      bottom: 32px;
+      color: var(--nickel);
+      cursor: default;
+      font: {
+        size: 1.2rem;
+        weight: var(--weight-semibold);
+      }
+      position: absolute;
+      right: 8px;
+      text-align: right;
+    }
+
     &-error {
       bottom: 3px;
       color: #ee5150;
