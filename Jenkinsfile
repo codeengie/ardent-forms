@@ -97,7 +97,7 @@ node {
 
     // In order to tap into AWS you need to create a user and generate credentials for Jenkins to use
     stage('Delete') {
-        echo "Deleting S3 bucket files for: ${getJobName()}"
+        echo "Deleting S3 bucket files for: ${getJobName()}.com"
 
         withAWS(region: 'us-west-1', credentials: 'aws-creds') {
             s3Delete bucket: "${getJobName()}.com", path: '/'
@@ -105,7 +105,7 @@ node {
     }
 
     stage('Upload') {
-        echo "Uploading files to S3 bucket: ${getJobName()}"
+        echo "Uploading files to S3 bucket: ${getJobName()}.com"
 
         withAWS(region: 'us-west-1', credentials: 'aws-creds') {
             s3Upload acl: 'Private', bucket: "${getJobName()}.com", cacheControl: 'max-age=31536000', includePathPattern: '*/**', workingDir: 'dist'
@@ -116,7 +116,7 @@ node {
         echo "Invalidating files from CloudFront edge caches for: ${getJobName()}.com"
 
         withAWS(region: 'us-west-1', credentials: 'aws-creds') {
-            cfInvalidate(distribution: 'E34E3GU4B9OLVY', paths: ['/*'], waitForCompletion: true)
+            cfInvalidate(distribution: "${DISTRO_ID}", paths: ['/*'], waitForCompletion: true)
         }
     }
 
