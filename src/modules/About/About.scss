@@ -2,6 +2,11 @@
   &__text {
     &:not(:first-of-type) {
       margin-top: 22px;
+
+      @media (width >= 992px) {
+        line-height: 1.5;
+        margin-top: 12px;
+      }
     }
   }
 }
