@@ -25,7 +25,7 @@ const Experience = () => {
 
     // Display loader while fetching data
     if (ctx.isLoading) {
-        content = <SkeletonLoader/>;
+        content = <SkeletonLoader count={2}/>;
     }
 
     useEffect(() => {

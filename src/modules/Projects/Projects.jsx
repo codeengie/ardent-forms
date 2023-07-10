@@ -25,7 +25,7 @@ const Projects = () => {
 
     // Display loader while fetching data
     if (ctx.isLoading) {
-        content = <SkeletonLoader/>
+        content = <SkeletonLoader count={4} modifier='image'/>
     }
 
     useEffect(() => {
