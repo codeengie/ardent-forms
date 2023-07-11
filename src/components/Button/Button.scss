@@ -1,8 +1,8 @@
 $button-border-radius: 6px;
 $button-height: 40px;
 $button-width: 126px;
-$icon-envelope-size: 20px;
-$icon-text-spacing: 4px;
+$icon-size: 20px;
+$icon-spacing: 8px;
 
 .button {
   $self: &;
@@ -10,15 +10,16 @@ $icon-text-spacing: 4px;
   display: flex;
   background-color: var(--cod-gray);
   border-radius: $button-border-radius;
-  color: black;
+  color: var(--grey-cloud);
   font: {
     family: 'Open Sans', sans-serif;
     size: 1.4rem;
-    weight: var(--weight-semibold);
+    weight: var(--weight-bold);
   }
   height: $button-height;
   justify-content: center;
-  max-width: 100px;
+  letter-spacing: .5px;
+  max-width: 168px;
   min-width: $button-width;
   overflow: hidden;
   padding: 0 20px;
@@ -26,7 +27,7 @@ $icon-text-spacing: 4px;
   transition: all .2s ease;
 
   &::before {
-    background-color: var(--blueberry);
+    background-color: var(--alizarin-crimson-deep);
     border-radius: $button-border-radius;
     height: $button-height;
     content: '';
@@ -63,15 +64,25 @@ $icon-text-spacing: 4px;
   }
 
   &__text {
-    margin-left: $icon-text-spacing;
+    margin-left: $icon-spacing;
   }
 
   &--email,
   &--link {
+    margin-right: $icon-spacing;
+  }
+
+  &--email {
     #{$self}__icon {
-      height: $icon-envelope-size;
-      margin-right: $icon-text-spacing;
-      width: $icon-envelope-size;
+      height: $icon-size - 5px;
+      width: $icon-size;
+    }
+  }
+
+  &--link {
+    #{$self}__icon {
+      height: $icon-size;
+      width: $icon-size;
     }
   }
 
@@ -83,18 +94,18 @@ $icon-text-spacing: 4px;
       color: var(--grey-cloud);
 
       #{$self}__icon {
-        background-image: url(../../assets/envelope-alt.svg);
+        background-position: bottom;
       }
     }
 
     &:hover {
       #{$self}__icon {
-        background-image: url(../../assets/envelope-alt.svg);
+        background-position: bottom;
       }
     }
 
     #{$self}__icon {
-      background: transparent url(../../assets/envelope.svg) center/$icon-envelope-size;
+      background: transparent url(../../assets/email.svg) no-repeat top/$icon-size;
     }
   }
 
@@ -105,19 +116,19 @@ $icon-text-spacing: 4px;
     &:hover,
     &:link,
     &:visited {
-      color: black;
+      color: var(--mercury);
     }
 
     &:hover {
       color: var(--grey-cloud);
 
       #{$self}__icon {
-        background-image: url(../../assets/arrow-alt.svg);
+        background-position: bottom;
       }
     }
 
     #{$self}__icon {
-      background: transparent url(../../assets/arrow.svg) center/$icon-envelope-size;
+      background: transparent url(../../assets/arrow.svg) no-repeat top/$icon-size;
     }
   }
 
