@@ -7,5 +7,10 @@
       size: 1rem;
       weight: var(--weight-semibold);
     }
+    letter-spacing: .5px;
+
+    @media (width >= 992px) {
+      font-size: 1.1rem;
+    }
   }
 }

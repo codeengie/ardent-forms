@@ -2,7 +2,7 @@
   $self: &;
 
   @media (width <= 767px) {
-    background-color: var(--eerie-black);
+    background-color: var(--cod-gray);
     height: 100vh;
     right: 0;
     position: absolute;
@@ -40,7 +40,6 @@
     }
 
     &-item {
-      color: var(--orochimaru);
       font: {
         size: 1.8rem;
         weight: var(--weight-bold);
@@ -78,7 +77,7 @@
       }
 
       &::after {
-        background: white;
+        background: var(--alizarin-crimson-dark);
         content: '';
         height: 2px;
         position: absolute;

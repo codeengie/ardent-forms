@@ -8,12 +8,14 @@
     margin-top: 10px;
 
     &-item {
-      background-color: var(--eerie-black);
+      background-color: var(--cod-gray);
+      border: 1px solid var(--mako);
       border-radius: 6px;
       font: {
         size: 1.2rem;
         weight: var(--weight-semibold);
       }
+      letter-spacing: .5px;
       padding: 1rem;
     }
   }
