@@ -64,7 +64,7 @@
         }
 
         #{$self}__form-wrap {
-          border: 1px solid var(--burnt-sienna);
+          outline: 1px solid var(--burnt-sienna);
         }
       }
     }
@@ -84,6 +84,22 @@
       &--ta {
         height: 180px;
         padding: 24px;
+      }
+    }
+
+    @media (width >= 992px) {
+      column-gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      &-button,
+      &-input:nth-child(3),
+      &-message {
+        grid-column: 1 / span 2;
+      }
+
+      &-button {
+        margin: 0 auto;
       }
     }
   }
