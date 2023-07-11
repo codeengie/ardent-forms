@@ -1,12 +1,12 @@
 .intro {
   align-items: center;
-  background-color: var(--cod-gray-2);
+  background-color: var(--cod-gray);
   display: flex;
   height: 206px;
   justify-content: center;
 
   &__head {
-    color: var(--alizarin-crimson-deep);
+    color: var(--alizarin-crimson-dark);
     font-size: 2.6rem;
     font: {
       size: 2.6rem;
@@ -19,7 +19,7 @@
   }
 
   &__tagline {
-    color: var(--orochimaru);
+    color: var(--silver-chalice);
     text-transform: none;
   }
 

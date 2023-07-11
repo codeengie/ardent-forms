@@ -8,7 +8,7 @@ $icon-spacing: 8px;
   $self: &;
   align-items: center;
   display: flex;
-  background-color: var(--cod-gray);
+  background-color: var(--cod-gray-dark);
   border-radius: $button-border-radius;
   color: var(--grey-cloud);
   font: {
@@ -27,7 +27,7 @@ $icon-spacing: 8px;
   transition: all .2s ease;
 
   &::before {
-    background-color: var(--alizarin-crimson-deep);
+    background-color: var(--alizarin-crimson-dark);
     border-radius: $button-border-radius;
     height: $button-height;
     content: '';
@@ -133,7 +133,7 @@ $icon-spacing: 8px;
   }
 
   &--spinner {
-    background-color: var(--blueberry) !important;
+    background-color: var(--alizarin-crimson-dark) !important;
     border-radius: 50%;
     min-width: inherit;
     padding: 0;
