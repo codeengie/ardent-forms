@@ -1,7 +1,7 @@
 import './SkeletonLoader.scss';
 
 const SkeletonLoader = (props) => {
-    const modifier = props.modifier ? 'skeleton skeleton--image' : 'skeleton';
+    const modifier = (props.modifier === 'image') ? 'skeleton skeleton--image' : 'skeleton';
     const skeletons = [];
 
     // Create as many skeleton as required by count props
