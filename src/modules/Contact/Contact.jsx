@@ -32,6 +32,7 @@ const Contact = () => {
 
             //const data = await response.json();
             //console.log(data);
+            // @todo Figure out a safer way to add a `<br/>` to break the string in between, do not use `dangerouslySetInnerHTML`
             setServerResponse('Thank you! Your message has been sent. I will get back to you shortly.');
         } catch (error) {
             console.log('Error:', error.message);
