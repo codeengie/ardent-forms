@@ -1,7 +1,7 @@
 $header-height: 54px;
 
 .header {
-  background-color: var(--eerie-black);
+  background-color: var(--cod-gray-2);
   height: $header-height;
   position: sticky;
   top: 0;
@@ -30,36 +30,3 @@ $header-height: 54px;
     }
   }
 }
-
-/*.header {
-  //align-items: center;
-  background-color: var(--eerie-black);
-  //display: flex;
-  height: $header-height;
-  padding-left: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1010;
-
-  @media (width >= 768px) {
-    padding-right: 20px;
-  }
-
-  &__wrap {
-    align-items: center;
-    display: flex;
-
-    @media (width >= 768px) {
-      margin: 0 auto;
-      width: 768px;
-    }
-
-    @media (width >= 992px) {
-      width: 992px;
-    }
-
-    @media (width >= 1200px) {
-      width: 1200px;
-    }
-  }
-}*/

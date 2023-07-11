@@ -11,18 +11,25 @@
   --orochimaru: #d9d9d9;
   --silver-chalice: #ababab;
 
+  // Revised color scheme
+  --cod-gray-2: #1b1b1b;
+  --iron: #dadde1;
+  --alizarin-crimson: #e22828;
+  --alizarin-crimson-deep: #e33232;
+  --mercury: #e5e5e5;
+  --neon-carrot: #ff8c2f;
+  --shark: #242526;
+
   // Typeface weights
   --weight-regular: 400;
-  //--weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
-  //--weight-xbold: 800;
 
   // Module spacing
   --module-space: 20px;
   --viewport-space: var(--module-space) * 2;
 
-  background-color: var(--carbon-fiber);
+  background-color: var(--shark);
   color: var(--silver-chalice);
   font: {
     family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -76,9 +83,12 @@ textarea {
 }
 
 h2 {
-  color: var(--clear-blue);
-  font-size: 1.4rem;
-  letter-spacing: .5px;
+  color: var(--neon-carrot);
+  font: {
+    size: 1.4rem;
+    weight: var(--weight-bold);
+  }
+  letter-spacing: 1px;
   text-transform: uppercase;
 
   @media (width >= 992px) {

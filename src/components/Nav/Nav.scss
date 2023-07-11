@@ -18,7 +18,7 @@
   }
 
   &__close {
-    background: transparent url('../../assets/close.svg') no-repeat center/24px;
+    background: transparent url(../../assets/close.svg) no-repeat center/24px;
     height: 54px;
     margin-left: 118px;
     width: 54px;
@@ -65,7 +65,7 @@
     }
 
     &-link {
-      color: var(--clear-blue);
+      color: var(--silver-chalice);
       position: relative;
       text-decoration: none;
       transition: all .2s ease;
