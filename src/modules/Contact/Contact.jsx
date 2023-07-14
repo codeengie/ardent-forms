@@ -146,7 +146,7 @@ const Contact = () => {
     return (
         <section className="contact" ref={contactRef}>
             <h2 className="contact__title">Contact</h2>
-            <p className="contact__text">Feel free to contact me and I&rsquo;ll get back to you as soon as possible</p>
+            <p className="contact__text">Feel free to contact me and I&rsquo;ll get back to you as soon as possible.</p>
             <form className="contact__form" onSubmit={formSubmitHandler}>
                 <div className={inputNameClass}>
                     <div className="contact__form-wrap">
