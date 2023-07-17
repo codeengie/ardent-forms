@@ -81,7 +81,7 @@ const Contact = () => {
 
     // Textarea
     const [textBoxCounter, setTextBoxCounter] = useState(0);
-    const maxChar = 415;
+    const maxChar = 500;
     const [textBox, setTextBox] = useState('');
     const [textBoxTouched, setTextBoxTouched] = useState(false);
     const textBoxIsValid = textBox.trim() !== '';

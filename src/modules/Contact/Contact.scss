@@ -13,15 +13,16 @@
     }
 
     &-counter {
-      bottom: 32px;
+      bottom: 36px;
       color: var(--nickel);
       cursor: default;
       font: {
         size: 1.2rem;
         weight: var(--weight-semibold);
       }
+      letter-spacing: .5px;
       position: absolute;
-      right: 8px;
+      right: 24px;
       text-align: right;
     }
 
