@@ -1,3 +1,11 @@
+/**
+ * Modified the original build config to output different `index.html` files based on environment. Although,
+ * I did manage to accomplish the task with `vite-plugin-html` it appears this plugin is no longer maintained
+ * and does not rename the template html files. Another major issue its inclusion of the template directory into
+ * the 'dist' folder. I worked around this by placing the prod version of `index.html` in the root, its Mickey Mouse
+ * but it will do for now. @todo Find a suitable replacement for 'vite-plugin-html'
+ */
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import basicSsl from '@vitejs/plugin-basic-ssl';
@@ -8,13 +16,11 @@ import { createHtmlPlugin } from 'vite-plugin-html';
  * changes to configuration.
  * @link https://vitejs.dev/config/
  * @link https://vitejs.dev/guide/env-and-mode.html
- * @todo Create a custom config for prod
  */
 
 // Build config
 let params = {
-  filename: 'index.html',
-  template: 'src/html/index.dev.html',
+  template: 'src/templates/index.dev.html',
   inject: {
     data: {
       title: 'Ardent Forms',
@@ -39,16 +45,12 @@ let options = {
 
 export default defineConfig(({ command, mode }) => {
   if (mode === 'production') {
-    params.filename = 'dist/index.html';
-    params.template = 'src/html/index.prod.html';
-    params.minify = true;
+    params.template = 'index.html';
     params.inject.data.bots = `<meta name="robots" content="noindex,nofollow">`;
     params.inject.data.gtag = `
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHPHTM29V"></script>
         <script>window.dataLayer = window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0GHPHTM29V');</script>`;
   }
-
-  console.log(params);
 
   return options;
 });
