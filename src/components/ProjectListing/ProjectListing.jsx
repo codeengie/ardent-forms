@@ -35,7 +35,7 @@ const ProjectListing = (props) => {
                     <p className="project-listing__code">Source code is private but readily available to share with potential employers upon request.</p>
                 </>
             )}
-            <div className="project-listing__links">
+            {props.data.Link && <div className="project-listing__links">
                 <Button
                     cName="project-listing__link"
                     text={`View ${props.data.Type}`}
@@ -46,7 +46,7 @@ const ProjectListing = (props) => {
                     <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
                 )}
 
-            </div>
+            </div>}
         </div>
     );
 }
