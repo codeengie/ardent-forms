@@ -46,7 +46,7 @@ let options = {
 export default defineConfig(({ command, mode }) => {
   if (mode === 'production') {
     params.template = 'index.html';
-    params.inject.data.bots = `<meta name="robots" content="noindex,nofollow">`;
+    params.inject.data.bots = `<meta name="robots" content="index,follow">`;
     params.inject.data.gtag = `
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHPHTM29V"></script>
         <script>window.dataLayer = window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0GHPHTM29V');</script>`;
