@@ -1,8 +1,8 @@
 import JobListing from '../../components/JobListing/JobListing.jsx';
 import { useContext, useEffect, useRef } from 'react';
-import PortfolioContext from '../../../store/portfolio-context.jsx';
+import PortfolioContext from '../../store/portfolio-context.jsx';
 import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader.jsx';
-import scrollContext from '../../../store/scroll-context.jsx';
+import scrollContext from '../../store/scroll-context.jsx';
 import './Experience.scss';
 
 const Experience = () => {

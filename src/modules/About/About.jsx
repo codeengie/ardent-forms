@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from 'react';
 import './About.scss';
-import ScrollContext from '../../../store/scroll-context.jsx';
+import ScrollContext from '../../store/scroll-context.jsx';
 
 const About = () => {
     const gradYear = 2010;

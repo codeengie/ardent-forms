@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import './MenuToggle.scss';
-import MenuContext from '../../../store/menu-context.jsx';
+import MenuContext from '../../store/menu-context.jsx';
 
 const MenuToggle = () => {
     const ctx = useContext(MenuContext);

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './Nav.scss';
-import MenuContext from '../../../store/menu-context.jsx';
-import ScrollContext from '../../../store/scroll-context.jsx';
+import MenuContext from '../../store/menu-context.jsx';
+import ScrollContext from '../../store/scroll-context.jsx';
 
 const Nav = () => {
     const ctxMenu = useContext(MenuContext);

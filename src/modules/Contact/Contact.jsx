@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './Contact.scss';
 import Button from '../../components/Button/Button.jsx';
-import ScrollContext from '../../../store/scroll-context.jsx';
+import ScrollContext from '../../store/scroll-context.jsx';
 
 const Contact = () => {
     const ctxScroll = useContext(ScrollContext);

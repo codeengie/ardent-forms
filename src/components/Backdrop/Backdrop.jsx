@@ -1,6 +1,6 @@
 import './Backdrop.scss';
 import { useContext } from 'react';
-import MenuContext from '../../../store/menu-context.jsx';
+import MenuContext from '../../store/menu-context.jsx';
 
 const Backdrop = () => {
     const ctxBackdrop = useContext(MenuContext);

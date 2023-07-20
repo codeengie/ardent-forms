@@ -1,8 +1,8 @@
 import ProjectListing from "../../components/ProjectListing/ProjectListing.jsx";
 import {useContext, useEffect, useRef} from 'react';
-import PortfolioContext from '../../../store/portfolio-context.jsx';
+import PortfolioContext from '../../store/portfolio-context.jsx';
 import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader.jsx';
-import ScrollContext from '../../../store/scroll-context.jsx';
+import ScrollContext from '../../store/scroll-context.jsx';
 import './Projects.scss';
 
 const Projects = () => {

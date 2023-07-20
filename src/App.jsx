@@ -6,8 +6,8 @@ import About from './modules/About/About.jsx';
 import Experience from './modules/Experience/Experience.jsx';
 import Projects from './modules/Projects/Projects.jsx';
 import Contact from './modules/Contact/Contact.jsx';
-import { PortfolioContextProvider } from '../store/portfolio-context.jsx';
-import { ScrollContextProvider } from '../store/scroll-context.jsx';
+import { PortfolioContextProvider } from './store/portfolio-context.jsx';
+import { ScrollContextProvider } from './store/scroll-context.jsx';
 
 const App = () => {
     return (
