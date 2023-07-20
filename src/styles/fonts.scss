@@ -1,0 +1,39 @@
+/**
+ * Ran into a build issue because the src url was not set correctly. The IDE will usually point your
+ * asset in the right folder but in both build and production modes the referenced font was not found. The IDE
+ * was showing the correct url with '../../' but would not build in production mode. To resolve the issue I removed
+ * '../../' and set the url to reference assets directly. It makes sense because when you build in production and
+ * examine the 'dist' folder you'll see everything is thrown into the assets folder including fonts without
+ * parent directory.
+ */
+
+// Open-Sans
+@font-face {
+  font: {
+    display: swap;
+    family: 'Open Sans';
+    style: normal;
+    weight: 400;
+  }
+  src: url(assets/fonts/open-sans-v35-latin-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: 'Open Sans';
+    style: normal;
+    weight: 600;
+  }
+  src: url(assets/fonts/open-sans-v35-latin-600.woff2) format('woff2');
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: 'Open Sans';
+    style: normal;
+    weight: 800;
+  }
+  src: url(assets/fonts/open-sans-v35-latin-700.woff2) format('woff2');
+}

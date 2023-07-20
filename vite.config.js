@@ -1,8 +1,8 @@
 /**
  * Modified the original build config to output different `index.html` files based on environment. Although,
  * I did manage to accomplish the task with `vite-plugin-html` it appears this plugin is no longer maintained
- * and does not rename the template html files. Another major issue its inclusion of the template directory into
- * the 'dist' folder. I worked around this by placing the prod version of `index.html` in the root, its Mickey Mouse
+ * and does not rename the output template html file. Plus, it also includes the template directory into the
+ * 'dist' folder. I worked around this by placing the prod version of `index.html` in the root, its Mickey Mouse
  * but it will do for now. @todo Find a suitable replacement for 'vite-plugin-html'
  */
 

@@ -1,3 +1,5 @@
+@import './styles/fonts';
+
 :root {
   // Color scheme
   --alizarin-crimson: #e22828;
@@ -25,7 +27,7 @@
   background-color: var(--shark);
   color: var(--silver-chalice);
   font: {
-    family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    family: 'Open Sans', sans-serif;
     size: 62.5%;
     weight: var(--weight-regular);
   }
