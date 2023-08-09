@@ -21,7 +21,7 @@ const createSendEmailCommand = (toAddress, fromName, fromAddress, fromMessage) =
     return new SendEmailCommand({
         Destination: {
             ToAddresses: [
-                toAddress,
+                toAddress
             ],
         },
         Message: {
@@ -40,7 +40,10 @@ const createSendEmailCommand = (toAddress, fromName, fromAddress, fromMessage) =
                 Data: `Message from ${fromName}`,
             },
         },
-        Source: toAddress
+        Source: toAddress,
+        ReplyToAddresses: [
+            fromAddress
+        ]
     });
 };
 
