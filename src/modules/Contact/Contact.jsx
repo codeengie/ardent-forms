@@ -190,7 +190,7 @@ const Contact = () => {
                     <div className="contact__form-counter">{`${textBoxCounter}/${maxChar}`}</div>
                     {textBoxIsInvalid && <p className="contact__form-error">Please enter a message</p>}
                 </div>
-                <Button cName={spinnerClass} disableButton={!formIsValid} text="Send"/>
+                <Button cName={spinnerClass} disableButton={!formIsValid} text="Send" variant="email"/>
                 <p className="contact__form-message">{serverResponse}</p>
             </form>
         </section>

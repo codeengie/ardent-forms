@@ -8,16 +8,23 @@ const Button = (props) => {
         </button>
 
     const linkHtml =
-        <a className={`button button--link ${props.cName}`} href={props.url} rel="noreferrer" target="_blank">
+        <a className={`button button--${props.variant} ${props.cName}`} href={props.url} rel="noreferrer" target="_blank">
             <span className="button__icon"></span>
             <span className="button__text">{props.text}</span>
         </a>
 
-    const content = (props.variant === 'link') ? linkHtml : buttonHtml;
+    const content = (variant) => {
+        switch(variant) {
+            case 'email':
+                return buttonHtml;
+            default:
+                return linkHtml;
+        }
+    }
 
     return (
         <>
-            {content}
+            {content(props.variant)}
         </>
     );
 }

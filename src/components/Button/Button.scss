@@ -67,11 +67,7 @@ $icon-spacing: 8px;
     margin-left: $icon-spacing;
   }
 
-  &--email,
-  &--link {
-    margin-right: $icon-spacing;
-  }
-
+  // Modifiers
   &--email {
     #{$self}__icon {
       height: $icon-size - 5px;
@@ -79,6 +75,7 @@ $icon-spacing: 8px;
     }
   }
 
+  &--code,
   &--link {
     #{$self}__icon {
       height: $icon-size;
@@ -86,7 +83,6 @@ $icon-spacing: 8px;
     }
   }
 
-  // @todo Create svg sprite for email and link backgrounds
   &--email {
     &:disabled,
     &:disabled:hover,
@@ -109,7 +105,9 @@ $icon-spacing: 8px;
     }
   }
 
+  &--code,
   &--link {
+    color: var(--mercury);
     text-decoration: none;
 
     &:active,
@@ -126,7 +124,15 @@ $icon-spacing: 8px;
         background-position: bottom;
       }
     }
+  }
 
+  &--code {
+    #{$self}__icon {
+      background: transparent url(../../assets/images/code.svg) no-repeat top/$icon-size;
+    }
+  }
+
+  &--link {
     #{$self}__icon {
       background: transparent url(../../assets/images/arrow.svg) no-repeat top/$icon-size;
     }
