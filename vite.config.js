@@ -24,7 +24,10 @@ let params = {
   inject: {
     data: {
       title: 'Ardent Forms',
-      desc: 'Ardent Forms is where I display my past and present web development projects.'
+      desc: 'Explore a decade of web development expertise - creating responsive, pixel perfect websites. Turn your digital aspiration into a reality with my coding skills.',
+      url: 'https://ardentforms.com',
+      image: 'https://ardentforms.com/app.jpg',
+      keywords: 'Web Developer, Front-end Developer, Responsive Web Design, User Interface (UI) Design, User Experience (UX) Design, Interactive Web Design, Web Development Portfolio, HTML5/CSS3, JavaScript, Mobile Responsive Design, Pixel-Perfect Design, Creative Coding'
     }
   }
 };

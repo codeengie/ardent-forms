@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)" />
-    <link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%- bots %>
-    <meta name="description" content="<%- desc %>" />
+    <meta name="description" content="<%- desc %>"/>
+    <meta name="keywords" content="<%- keywords %>"/>
     <title><%- title %></title>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Ardent Forms"/>
-    <meta property="og:description" content="Ardent Forms is where I display my past and present web development projects."/>
+    <meta property="og:title" content="<%- title %>"/>
+    <meta property="og:description" content="<%- desc %>"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://ardentforms.com"/>
-    <meta property="og:image" content="https://ardentforms.com/app.jpg"/>
+    <meta property="og:url" content="<%- url %>"/>
+    <meta property="og:image" content="<%- image %>"/>
 
     <!-- Google Tag -->
     <%- gtag %>
