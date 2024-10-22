@@ -9,7 +9,7 @@ const ProjectListing = (props) => {
     const imageSources = viewports
         .map(view => `${import.meta.env.VITE_IMG_URL}${imageName}-${view}w.webp ${view}w`)
         .toString();
-    const customClass = props.data?.Url && props.data?.Codigo ? 'project-listing__links project-listing__links--row' : 'project-listing__links';
+    const customClass = props.data?.Url && props.data?.Code ? 'project-listing__links project-listing__links--row' : 'project-listing__links';
 
     return (
         <div className="project-listing">
@@ -30,14 +30,13 @@ const ProjectListing = (props) => {
             <h3 className="project-listing__title">{props.data.Title}</h3>
             <p className="project-listing__detail">{props.data.Info}</p>
             <TechStack list={props.data.Tech}/>
-            {props.data.Codigo?.Private !== undefined && props.data.Codigo.Private && (
+            {props.data.Code?.Private !== undefined && props.data.Code.Private && (
                 <>
                     <h4 className="project-listing__subtitle">Code</h4>
                     <p className="project-listing__code">Source code is private but readily available to share with potential employers upon request.</p>
                 </>
             )}
-
-            {(props.data?.Url || props.data?.Codigo) && (
+            {(props.data?.Url || props.data?.Code) && (
                 <div className={customClass}>
                     {props.data?.Url && (
                         <Button
@@ -47,17 +46,16 @@ const ProjectListing = (props) => {
                             variant="link"
                         />
                     )}
-                    {props.data?.Codigo && (
+                    {props.data?.Code && (
                         <Button
                             cName="project-listing__link"
                             text="View Source"
-                            url={props.data.Codigo.Url}
+                            url={props.data.Code.Url}
                             variant="code"
                         />
                     )}
                 </div>
             )}
-
         </div>
     );
 }
