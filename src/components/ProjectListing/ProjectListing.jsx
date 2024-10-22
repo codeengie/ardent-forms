@@ -9,9 +9,7 @@ const ProjectListing = (props) => {
     const imageSources = viewports
         .map(view => `${import.meta.env.VITE_IMG_URL}${imageName}-${view}w.webp ${view}w`)
         .toString();
-    const blacklist = new RegExp('\\b(ardentforms)\\b');
-    const isPublic = props.data.Codigo?.Private !== undefined && !props.data.Codigo.Private;
-    const customClass = isPublic ? 'project-listing__links project-listing__links--row': 'project-listing__links';
+    const customClass = props.data?.Url && props.data?.Codigo ? 'project-listing__links project-listing__links--row' : 'project-listing__links';
 
     return (
         <div className="project-listing">
@@ -38,15 +36,18 @@ const ProjectListing = (props) => {
                     <p className="project-listing__code">Source code is private but readily available to share with potential employers upon request.</p>
                 </>
             )}
-            {props.data.Url && !blacklist.test(props.data.Url) && (
+
+            {(props.data?.Url || props.data?.Codigo) && (
                 <div className={customClass}>
-                    <Button
-                        cName="project-listing__link"
-                        text={`View ${props.data.Type}`}
-                        url={props.data.Url}
-                        variant="link"
-                    />
-                    {isPublic && (
+                    {props.data?.Url && (
+                        <Button
+                            cName="project-listing__link"
+                            text={`View ${props.data.Type}`}
+                            url={props.data.Url}
+                            variant="link"
+                        />
+                    )}
+                    {props.data?.Codigo && (
                         <Button
                             cName="project-listing__link"
                             text="View Source"
@@ -54,11 +55,9 @@ const ProjectListing = (props) => {
                             variant="code"
                         />
                     )}
-                    {props.data.Demo && (
-                        <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
-                    )}
                 </div>
             )}
+
         </div>
     );
 }
