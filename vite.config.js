@@ -23,11 +23,11 @@ let params = {
   template: 'src/templates/index.dev.html',
   inject: {
     data: {
-      title: 'Ardent Forms',
-      desc: 'Explore a decade of web development expertise - creating responsive, pixel perfect websites. Turn your digital aspiration into a reality with my coding skills.',
-      url: 'https://ardentforms.com',
-      image: 'https://ardentforms.com/app.jpg',
-      keywords: 'Web Developer, Front-end Developer, Responsive Web Design, User Interface (UI) Design, User Experience (UX) Design, Interactive Web Design, Web Development Portfolio, HTML5/CSS3, JavaScript, Mobile Responsive Design, Pixel-Perfect Design, Creative Coding'
+      title: 'Your Website Title',
+      desc: 'Add Your Description Here',
+      url: 'https://your-url-here.com',
+      image: 'https://your-url-here/app.jpg',
+      keywords: 'Add Your Keywords Here'
     }
   }
 };
@@ -51,8 +51,8 @@ export default defineConfig(({ command, mode }) => {
     params.template = 'index.html';
     params.inject.data.bots = `<meta name="robots" content="index,follow">`;
     params.inject.data.gtag = `
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHPHTM29V"></script>
-        <script>window.dataLayer = window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0GHPHTM29V');</script>`;
+        <script async src="https://www.googletagmanager.com/gtag/js?id=ADD-YOUR-GTAG"></script>
+        <script>window.dataLayer = window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','ADD-YOUR-GTAG');</script>`;
   }
 
   return options;

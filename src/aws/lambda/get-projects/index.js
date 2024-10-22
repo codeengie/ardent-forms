@@ -10,7 +10,7 @@ import { DynamoDBClient, ScanCommand } from '@aws-sdk/client-dynamodb';
 import { unmarshall } from '@aws-sdk/util-dynamodb';
 
 const dynamodb = new DynamoDBClient();
-const tableName = 'ArdentForms';
+const tableName = process.env.TABLE_NAME;
 const queryType = 'project'; // Keyword to query the database table's primary key in this case GSI
 
 export const handler = async (event, context) => {

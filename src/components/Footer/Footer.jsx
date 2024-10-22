@@ -5,7 +5,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <small className="footer__text">Copyright &copy; {currentDate} Ardent Forms. All Rights Reserved.</small>
+            <small className="footer__text">Copyright &copy; {currentDate} Add Website Name. All Rights Reserved.</small>
         </footer>
     );
 }
