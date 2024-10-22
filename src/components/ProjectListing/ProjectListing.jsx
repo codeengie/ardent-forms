@@ -54,6 +54,9 @@ const ProjectListing = (props) => {
                             variant="code"
                         />
                     )}
+                    {props.data.RequiresLogin && (
+                        <p className="project-listing__disclaimer">* Requires user credentials, available upon request</p>
+                    )}
                 </div>
             )}
         </div>
