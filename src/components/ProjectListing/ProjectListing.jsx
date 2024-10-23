@@ -30,12 +30,6 @@ const ProjectListing = (props) => {
             <h3 className="project-listing__title">{props.data.Title}</h3>
             <p className="project-listing__detail">{props.data.Info}</p>
             <TechStack list={props.data.Tech}/>
-            {props.data.Code?.Private !== undefined && props.data.Code.Private && (
-                <>
-                    <h4 className="project-listing__subtitle">Code</h4>
-                    <p className="project-listing__code">Source code is private but readily available to share with potential employers upon request.</p>
-                </>
-            )}
             {(props.data?.Url || props.data?.Code) && (
                 <div className={customClass}>
                     {props.data?.Url && (
