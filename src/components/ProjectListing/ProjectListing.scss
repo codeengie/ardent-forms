@@ -11,6 +11,8 @@
       weight: var(--weight-semibold);
     }
     margin-top: 4px;
+    text-align: center;
+    width: 100%;
   }
 
   &__links {
@@ -22,7 +24,7 @@
     // Modifier
     &--row {
       @media (width >= 576px) {
-        flex-flow: row;
+        flex-flow: row wrap;
         justify-content: center;
       }
 
